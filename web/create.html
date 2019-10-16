@@ -1,0 +1,113 @@
+<html lang = "en" class = "create-bg">
+<head>
+
+  <title>Signup</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <script>
+    function signup()
+    {
+        var name = document.forms["RegForm"]["Name"];
+        var email = document.forms["RegForm"]["Email"];
+        var phone = document.forms["RegForm"]["Telephone"];
+        var username =  document.forms["RegForm"]["Username"];
+        var password = document.forms["RegForm"]["Password"];
+        var confPwd = document.forms["RegForm"]["ConfirmPassword"];
+        var phoneno = /^\d{10}$/;
+
+
+        if (name.value == "")
+        {
+            window.alert("Please enter your name.");
+            name.focus();
+            return false;
+        }
+
+        if (email.value == "")
+        {
+            window.alert("Please enter a valid e-mail address.");
+            email.focus();
+            return false;
+        }
+
+        if (email.value.indexOf("@", 0) < 0)
+        {
+            window.alert("Please enter a valid e-mail address.");
+            email.focus();
+            return false;
+        }
+
+        if (email.value.indexOf(".", 0) < 0)
+        {
+            window.alert("Please enter a valid e-mail address.");
+            email.focus();
+            return false;
+        }
+
+        if (!phone.value.match(phoneno))
+        {
+            window.alert("Please enter a valid 10 digit telephone number.");
+            phone.focus();
+            return false;
+        }
+
+        if (username.value == "")
+        {
+            alert("Please enter a valid username");
+            username.focus();
+            return false;
+        }
+
+        if (password.value == "")
+        {
+            window.alert("Please enter your password");
+            password.focus();
+            return false;
+        }
+
+        if (password.value.length < 8)
+        {
+          window.alert("Please choose a password that is a minimum of 8 charcters long.")
+          return false;
+        }
+
+        if(password.value != confPwd.value)
+        {
+          window.alert("Passwords don't match!");
+          confPwd.focus();
+          return false;
+        }
+
+        download(this.form);
+        return true;
+}
+</script>
+
+</head>
+<body>
+  <div class = "navbar1">
+    <a href = "home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+  </div>
+  <div class = "signup">
+    <img src = "pic4.jpg" class= "avatar">
+    <h1>CREATE ACCOUNT</h1>
+    <form action = "/Project/Register" name = "RegForm" method="POST" onsubmit="return signup()">
+      <p>Name</p>
+      <input type = "text" name= "Name" id = "name" placeholder="Enter name..." />
+      <p>Email</p>
+      <input type = "email" name= "Email" id = "email"  placeholder="Enter email..." />
+      <p>Contact Number</p>
+      <input type = "text" name= "Telephone" id = "telephone" placeholder="123-456-7890" />
+      <p>Username</p>
+      <input type = "text" name= "Username" id = "username" placeholder="Enter username..." />
+      <p>Password</p>
+      <input type = "password" name= "Password" id = "password" placeholder="Enter password..." /><br>
+      <p>Re-type Password</p>
+      <input type = "password" name= "ConfirmPassword" placeholder="Enter your password again" /><br><br>
+      <input type = "submit" id="submitButton" value = "CREATE"  /><br><br>
+      <a href="login.jsp">Already have an account?</a><br>
+    </form>
+  </div>
+</body>
+</html>

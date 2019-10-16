@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Searchable List of Events</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="table.css">
+        <script>
+            function myFunction() {
+                
+	
+            var today = new Date();
+            var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            //alert("Today's date is "+date);
+              // Declare variables
+              var input, filter, table, tr, td, i, txtValue;
+              input = document.getElementById("myInput");
+              filter = input.value.toUpperCase();
+              table = document.getElementById("myTable");
+              tr = table.getElementsByTagName("tr");
+
+              // Loop through all table rows, and hide those who don't match the search query
+              for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                tableDate = tr[i].getElementsByTagName("td")[3];
+                if (td) {
+                  txtValue = td.textContent || td.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1 && tableDate.textContent>date) {
+                    tr[i].style.display = "";
+                  } else {
+                    tr[i].style.display = "none";
+                  }
+                }
+              }
+            }
+        </script>
+        <style>
+	h6{
+	font-family: "Helvetica";
+        color:white;
+	background-color: red;
+	height: 300px;
+	text-align:center;
+	size:500px;
+	background-image:url("events1.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
+	padding:0 0 20px;
+	font-weight:1000;
+	}
+        
+        #dash{
+	position: fixed;
+	bottom: 20px;
+	left: 30px;
+	border: none;
+	outline: none;
+	background-image:url("home.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:contain;
+	cursor: pointer;
+	padding: 25px;
+	size:500px;
+	border-radius:50px;
+	}
+        </style>
+    </head>
+    <body>
+         <a href ="dashboard.jsp" class="button" id="dash" title="Go to Dashboard" ></a>
+         <h6>You can find social events, workshops and talk sessions.</h6>
+         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for events...">
+
+        <table id="myTable">
+          <tr class="header">
+            <th style="width:20%;">Event ID</th>
+            <th style="width:30%;">Event Name</th>
+            <th style="width:20%;">Event Type</th>
+            <th style="width:20%;">Event Date</th>
+            <th style="width:60%;">Event Description</th>
+            <th style="width:30%;">Registration</th>
+          </tr>
+          <tr>
+            <td>E101</td>
+            <td>Blood Donation</td>
+            <td>Social</td>
+            <td>2019-10-19</td>
+            <td>Giving blood is a simple thing to do, but it can make a huge difference to other people's lives.</td>
+            <td><a href="participate.html">Participate Now</a></td>
+          </tr>
+          <tr>
+            <td>E129</td>
+            <td>Career Counseling</td>
+            <td>Talk Session</td>
+            <td>2019-11-30</td>
+            <td>A counseling session and career preparedness workshop by the world-renowned Mr. J.P. Gandhi</td>
+            <td><a href="participate.html">Participate Now</a></td>
+          </tr>
+          <tr>
+            <td>E2011</td>
+            <td>Photography Workshop</td>
+            <td>Workshop</td>
+            <td>2019-12-27</td>
+            <td>A hands-on session by famous wildlife photographer J. Mrinalini Kumar</td>
+            <td><a href="participate.html">Participate Now</a></td>
+          </tr>
+          <tr>
+            <td>E121</td>
+            <td>Organ Donation Awareness</td>
+            <td>Social</td>
+            <td>2018-11-03</td>
+            <td>Awareness campaign by Apollo Hospital</td>
+            <td><a href="participate.html">Participate Now</a></td>
+          </tr>
+        </table> 
+    </body>
+</html>

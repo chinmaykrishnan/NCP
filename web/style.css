@@ -1,0 +1,377 @@
+.login-bg, .create-bg{
+  margin: 0;
+  padding: 0;
+  background: url("pic7.jpg");
+  background-size: 1800px;
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+}
+h3{
+    
+}
+.loginbox{
+  width: 350px;
+  height: 430px;
+  background: #1f1f14;
+  color: white;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  opacity: 0.8;
+  padding: 70px 30px;
+}
+
+.avatar{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+h1{
+  padding: 0 0 20px;
+  margin: 0;
+  text-align: center;
+  font-family: monospace;
+
+}
+
+.loginbox p{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #e0e0d1;
+  font-family: monospace;
+  font-size: 18px;
+}
+
+.loginbox input{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.loginbox input[type="text"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  color: white;
+  outline: none;
+  height: 35px;
+  font-size: 16px;
+}
+
+.loginbox input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  color: white;
+  height: 35px;
+  font-size: 16px;
+}
+
+.loginbox input[type="submit"]{
+  border: none;
+  outline: none;
+  height: 40px;
+  background: grey;
+  color: white;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.loginbox input[type="submit"]:hover {
+cursor: pointer;
+background: white;
+color: #000;
+}
+
+.loginbox a{
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 20px;
+  color: darkgrey;
+}
+
+.loginbox a:hover{
+  color: white;
+}
+
+
+.signup{
+  margin-top: 100px;
+  width: 380px;
+  height: 700px;
+  background: #1f1f14;
+  color: white;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  opacity: 0.8;
+  padding: 70px 30px;
+}
+
+.signup p{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #e0e0d1;
+  font-family: monospace;
+  font-size: 18px;
+}
+
+.signup input{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.signup input[type="text"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  color: white;
+  outline: none;
+  height: 35px;
+  font-size: 16px;
+
+}
+
+.signup input[type="email"], input[type="password"],input[type="number"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  color: white;
+  height: 35px;
+  font-size: 16px;
+}
+
+.signup input[type="submit"]{
+  border: none;
+  outline: none;
+  height: 40px;
+  background: grey;
+  color: white;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.signup input[type="submit"]:hover {
+cursor: pointer;
+background: white;
+color: #000;
+}
+
+.signup a:hover{
+  color: white;
+}
+
+.signup a{
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 20px;
+  color: darkgrey;
+}
+
+.signup a:hover{
+  color: white;
+}
+
+.forgot-bg{
+  margin: 0;
+  padding: 0;
+  background: url("pic12.jpg");
+  background-size: 850px;
+  background-position: center;
+  font-family: sans-serif;
+}
+
+.forgotbox{
+  width: 320px;
+  height: 430px;
+  background: #1f1f14;
+  color: white;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  opacity: 0.8;
+  padding: 30px 20px;
+}
+
+.forgotbox p{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #e0e0d1;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.forgotbox input{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.forgotbox input[type="email"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  color: white;
+  outline: none;
+  height: 35px;
+  font-size: 16px;
+}
+
+.forgotbox input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  color: white;
+  height: 35px;
+  font-size: 16px;
+}
+
+.forgotbox input[type="submit"]{
+  border: none;
+  outline: none;
+  height: 40px;
+  background: grey;
+  color: white;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.forgotbox input[type="submit"]:hover {
+cursor: pointer;
+background: black;
+color: white;
+}
+
+.forgotbox a{
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 20px;
+  color: darkgrey;
+}
+
+.forgotbox a:hover{
+  color: white;
+}
+
+
+header {
+  background-image:url("pic9.jpeg");
+  background-position: left;
+  background-size: 100% 200%;
+  padding: 50px;
+}
+
+h2{
+  text-align: left;
+  font-family: fantasy;
+  font-size: 70px;
+  color: white;
+}
+
+h3{
+  color: darkgreen;
+}
+.navbar{
+  width: 100%;
+  background-color: black;
+  overflow: auto;
+  font-family: sans-serif;
+
+}
+
+.user{
+  float:right;
+}
+.navbar a{
+  float: left;
+  padding: 14px;
+  color: white;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: darkgreen;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+#example {
+  background-image: url("pic11.jpg"), url("pic10.jpg");
+  background-position: right, center;
+  padding: 20px;
+  background-size: 60%, 100%;
+  background-repeat: no-repeat, no-repeat;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  background: #222;
+  color: white;
+}
+
+.navbar1{
+  width: 6.65%;
+  height: 6.90%;
+  background-color: black;
+  color: white;
+  overflow: auto;
+  font-family: sans-serif;
+}
+
+.navbar1 a{
+  float: left;
+  padding: 14px;
+  color: white;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.navbar1 a:hover {
+  background-color: darkgreen;
+}
+
+.feedback-bg{
+  background-image: url("pic13.jpg");
+  background-size: 750px;
+}
+
+.contact-bg
+{
+  background-image: url("pic14.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+  color: white
+}

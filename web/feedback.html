@@ -1,0 +1,56 @@
+<html lang="en" class = "feedback-bg">
+<head>
+<title>Feedback</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel = "stylesheet" type = "text/css" href = "style.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script>
+  function signup()
+  {
+      var email = document.forms["RegForm"]["Email"];
+      var comment = document.forms["RegForm"]["comment"];
+      if (email.value == "")
+      {
+          window.alert("Please enter a valid e-mail address.");
+          email.focus();
+          return false;
+      }
+
+      if (email.value.indexOf("@", 0) < 0)
+      {
+          window.alert("Please enter a valid e-mail address.");
+          email.focus();
+          return false;
+      }
+
+      if (email.value.indexOf(".", 0) < 0)
+      {
+          window.alert("Please enter a valid e-mail address.");
+          email.focus();
+          return false;
+      }
+      if (comment.value == "")
+      {
+          window.alert("Please leave a comment");
+          email.focus();
+          return false;
+      }
+      return true;
+  }
+</script>
+</head>
+
+<body>
+
+  <div class = "loginbox">
+    <h1>FEEDBACK</h1>
+    <form name ="RegForm" action="/Project/SubmitFeedback" method="POST" onsubmit="return signup()">
+    <p>Email</p>
+    <input type = "text" name= "Email" placeholder="Enter email">
+    <p>Comment</p>
+    <textarea name = "comment" rows="8" cols="35"></textarea><br><br>
+    <input type = "submit" name = "ok" value = "SUBMIT FEEDBACK"><br><br>
+    </form>
+  </div>
+  </body>
+  </html>

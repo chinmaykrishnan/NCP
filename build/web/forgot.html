@@ -1,0 +1,39 @@
+<html class = "forgot-bg">
+<head>
+<title>Forgot Password</title>
+<script>
+  function checkPwd()
+  {
+    var email = document.forms["ForgotPwd"]["email"];
+    var pwd = document.forms["ForgotPwd"]["Pwd"];
+    var confPwd = document.forms["ForgotPwd"]["ConfPwd"];
+
+    if(pwd.value!=confPwd.value)
+    {
+      window.alert("Passwords do not match. Re-enter password.");
+      confPwd.focus();
+      return false;
+    }
+  }
+</script>
+
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel = "stylesheet" type = "text/css" href = "style.css">
+<body>
+  <div class = "navbar1">
+    <a href = "home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+  </div>
+  <div class = "forgotbox">
+    <h1>FORGOT PASSWORD</h1>
+    <form name = "ForgotPwd" method = "POST" onclick="return checkPwd()">
+      <p>Email</p>
+      <input type = "email" name= "email" placeholder="Enter your email...">
+      <p>Password</p>
+      <input type = "password" name = "Pwd" placeholder="Enter new password..."><br><br>
+      <p>Re-enter Password</p>
+      <input type = "password" name = "ConfPwd" placeholder="Enter password again"><br><br>
+      <input type = "submit" name = "" value = "SET NEW PASSWORD"><br><br>
+    </div>
+    </form>
+</body>
